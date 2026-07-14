@@ -59,7 +59,7 @@ Untuk menjalankan aplikasi ini di server atau komputer lokal:
    *Catatan: Kami telah menghapus pengecualian folder `public/build` dari `.gitignore`, sehingga jika Anda menarik kode dari Github ke Shared Hosting, aset (JS/CSS) yang sudah dibuild akan ikut tertarik. Anda tidak perlu repot-repot menggunakan NPM di hosting!*
    Namun jika Anda mengembangkan kode di komputer lokal, jalankan:
    ```bash
-   npm install
+   npm ci
    npm run build
    ```
 
