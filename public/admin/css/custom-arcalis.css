@@ -1,0 +1,122 @@
+/* custom-arcalis.css */
+
+/* --- Variabel Warna Arcalis --- */
+:root {
+    --arcalis-primary: #4FC3F7; /* Biru Cerah (Light Blue 300) */
+    --arcalis-secondary: #0288D1; /* Biru Aksen (Light Blue 700) */
+    --arcalis-bg-light: #F5F5F5; /* Abu-abu sangat terang */
+    --arcalis-text-dark: #212121; /* Abu-abu gelap untuk teks utama */
+    --arcalis-text-muted: #757575; /* Abu-abu untuk teks muted */
+
+    /* Warna default Bootstrap yang bisa di-override atau digunakan */
+    --success-color: #4CAF50; /* Green */
+    --info-color: #2196F3;    /* Blue */
+    --warning-color: #FFC107; /* Amber */
+    --danger-color: #F44336;  /* Red */
+}
+
+/* --- Latar Belakang Custom untuk Halaman Auth (Login/Register) --- */
+.bg-arcalis-gradient-light {
+    background: linear-gradient(135deg, var(--arcalis-primary) 0%, var(--arcalis-bg-light) 100%);
+    background-attachment: fixed;
+}
+.arcalis-card {
+    border-radius: 1rem; /* Sudut lebih membulat */
+    overflow: hidden; /* Pastikan konten tidak keluar dari border-radius */
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important; /* Bayangan lebih lembut */
+}
+.arcalis-bg-image {
+    background: url('../img/arcalis_login_illustration.svg'); /* Ganti dengan path ilustrasi login Anda */
+    background-position: center;
+    background-size: cover;
+}
+.arcalis-bg-register-image {
+    background: url('../img/arcalis_register_illustration.svg'); /* Ganti dengan path ilustrasi register Anda */
+    background-position: center;
+    background-size: cover;
+}
+
+/* --- Override Warna SB Admin 2 / Bootstrap --- */
+
+/* Sidebar */
+.navbar-nav.bg-arcalis-gradient {
+    background-color: var(--arcalis-primary) !important;
+    background-image: linear-gradient(180deg, var(--arcalis-primary) 10%, var(--arcalis-secondary) 100%) !important;
+    background-size: cover;
+}
+
+/* Tombol Kustom Arcalis */
+.btn-arcalis-primary { /* Tombol utama, misal Deteksi Tanaman */
+    background-color: var(--arcalis-primary);
+    border-color: var(--arcalis-primary);
+    color: #fff;
+    transition: all 0.3s ease; /* Animasi hover */
+}
+.btn-arcalis-primary:hover,
+.btn-arcalis-primary:focus {
+    background-color: var(--arcalis-secondary); /* Warna lebih gelap saat hover */
+    border-color: var(--arcalis-secondary);
+    color: #fff;
+}
+
+.btn-arcalis-secondary { /* Tombol sekunder, misal Tambah Arcalis */
+    background-color: #fff;
+    border-color: var(--arcalis-primary);
+    color: var(--arcalis-primary);
+    transition: all 0.3s ease;
+}
+.btn-arcalis-secondary:hover,
+.btn-arcalis-secondary:focus {
+    background-color: var(--arcalis-primary);
+    border-color: var(--arcalis-primary);
+    color: #fff;
+}
+
+.btn-arcalis-google { /* Tombol Google */
+    background-color: #db4437; /* Merah Google */
+    border-color: #db4437;
+    color: #fff;
+    transition: all 0.3s ease;
+}
+.btn-arcalis-google:hover,
+.btn-arcalis-google:focus {
+    background-color: #c43c2d;
+    border-color: #c43c2d;
+    color: #fff;
+}
+
+
+/* Teks dan Judul */
+.arcalis-text-dark { color: var(--arcalis-text-dark) !important; }
+.arcalis-link { color: var(--arcalis-secondary) !important; }
+.arcalis-link:hover { text-decoration: underline; }
+
+/* Input fields */
+.arcalis-input {
+    border-radius: 0.5rem; /* Sudut membulat */
+    border: 1px solid var(--arcalis-bg-light);
+}
+.arcalis-input:focus {
+    border-color: var(--arcalis-primary);
+    box-shadow: 0 0 0 0.2rem rgba(var(--arcalis-primary-rgb), 0.25);
+}
+
+
+/* Override text colors for Bootstrap classes to match Arcalis theme */
+.text-primary { color: var(--arcalis-secondary) !important; } /* Ganti primary SB Admin 2 dengan biru aksen kita */
+.text-success { color: var(--success-color) !important; }
+.text-info { color: var(--info-color) !important; }
+.text-warning { color: var(--warning-color) !important; }
+.text-danger { color: var(--danger-color) !important; }
+
+/* Override border colors for cards */
+.border-left-primary { border-left: .25rem solid var(--arcalis-secondary) !important; }
+.border-left-success { border-left: .25rem solid var(--success-color) !important; }
+.border-left-info { border-left: .25rem solid var(--info-color) !important; }
+.border-left-warning { border-left: .25rem solid var(--warning-color) !important; }
+.border-left-danger { border-left: .25rem solid var(--danger-color) !important; }
+
+/* Custom: Memberikan padding lebih pada body untuk tampilan lebih nyaman */
+body#page-top {
+    padding-top: 0; /* Hapus padding default SB Admin 2 jika ada */
+}
